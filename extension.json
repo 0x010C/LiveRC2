@@ -23,6 +23,7 @@
     "ResourceModules": {
         "ext.liverc": {
             "scripts": [
+                "modules/mw.liverc.RCProvider.js",
                 "modules/mw.liverc.LiveRC.js"
             ],
 			"dependencies": [
