@@ -1,0 +1,57 @@
+{
+    "name": "LiveRC",
+    "version": "2.0.0",
+    "author": [
+        "Antoine Lamielle"
+    ],
+    "url": "",
+    "namemsg": "liveRC",
+    "descriptionmsg": "liveRC-desc",
+    "license-name": "GPL-2.0+",
+    "type": "other",
+    "manifest_version": 1,
+	"config": {},
+	"DefaultUserOptions": {},
+    "MessagesDirs": {
+        "LiveRC": [
+            "i18n"
+        ]
+    },
+    "AutoloadClasses": {
+        "SpecialLiveRC": "specials/SpecialLiveRC.php"
+    },
+    "ResourceModules": {
+        "ext.liverc": {
+            "scripts": [
+                "modules/mw.liverc.LiveRC.js"
+            ],
+			"dependencies": [
+				"mediawiki.util",
+			    "ext.liverc.base",
+			    "ext.liverc.styles",
+				"ext.liverc.i18n"
+			]
+        },
+        "ext.liverc.base": {
+            "scripts": [
+                "modules/mw.liverc.js"
+            ]
+        },
+        "ext.liverc.styles": {
+            "styles": [
+                "modules/mw.liverc.css"
+            ]
+        },
+        "ext.liverc.i18n": {
+			"messages": []
+        }
+    },
+    "ResourceFileModulePaths": {
+        "localBasePath": ".",
+        "remoteExtPath": "LiveRC"
+    },
+    "SpecialPages": {
+        "LiveRC": "SpecialLiveRC"
+    },
+    "Hooks": {}
+}
