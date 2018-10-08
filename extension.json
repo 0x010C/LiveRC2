@@ -27,7 +27,9 @@
             ],
 			"dependencies": [
 				"mediawiki.util",
+				"oojs",
 			    "ext.liverc.base",
+				"ext.liverc.rc",
 			    "ext.liverc.styles",
 				"ext.liverc.i18n"
 			]
@@ -36,6 +38,17 @@
             "scripts": [
                 "modules/mw.liverc.js"
             ]
+        },
+        "ext.liverc.rc": {
+            "scripts": [
+                "modules/rc/mw.liverc.rc.js",
+                "modules/rc/mw.liverc.rc.Generic.js",
+                "modules/rc/mw.liverc.rc.Edit.js",
+                "modules/rc/mw.liverc.rc.Log.js"
+            ],
+			"dependencies": [
+				"oojs"
+			]
         },
         "ext.liverc.styles": {
             "styles": [
