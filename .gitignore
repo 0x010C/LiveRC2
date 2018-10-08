@@ -1,0 +1,8 @@
+*~
+*.swp
+node_modules
+vendor
+*.lock
+lib/
+.ftpconfig
+.ftpignore
