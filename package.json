@@ -1,0 +1,23 @@
+{
+  "name": "liverc",
+  "version": "2.0.0",
+  "dependencies": {
+    "golden-layout": "^1.5.9"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "postinstall": ". ./bin/build.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/0x010C/LiveRC2.git"
+  },
+  "keywords": [
+    "MediaWiki",
+    "RecentChanges"
+  ],
+  "bugs": {
+    "url": "https://github.com/0x010C/LiveRC2/issues"
+  },
+  "homepage": "https://github.com/0x010C/LiveRC2#readme"
+}

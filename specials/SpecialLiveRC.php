@@ -14,7 +14,6 @@ class SpecialLiveRC extends SpecialPage {
 	public function execute( $sub ) {
 		$out = $this->getOutput();
 
-		$out->addModuleStyles( 'ext.liverc.styles' );
 		$out->addModules( 'ext.liverc' );
 		$out->setPageTitle( $this->msg( 'special-liverc-title' ) );
 		$out->addWikiMsg( 'special-liverc-intro' );

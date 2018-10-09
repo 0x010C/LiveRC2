@@ -6,3 +6,4 @@ vendor
 lib/
 .ftpconfig
 .ftpignore
+package-lock.json
