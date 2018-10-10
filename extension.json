@@ -23,14 +23,17 @@
     "ResourceModules": {
         "ext.liverc": {
             "scripts": [
+				"lib/golden-layout/goldenlayout.js",
                 "modules/mw.liverc.RCProvider.js",
                 "modules/mw.liverc.LiveRC.js"
             ],
 			"dependencies": [
 				"mediawiki.util",
+				"mediawiki.storage",
 				"oojs",
 			    "ext.liverc.base",
 				"ext.liverc.ui",
+				"ext.liverc.controller",
 				"ext.liverc.rc",
 			    "ext.liverc.styles",
 				"ext.liverc.i18n"
@@ -43,7 +46,15 @@
         },
         "ext.liverc.ui": {
             "scripts": [
-                "lib/golden-layout/goldenlayout.js"
+                "modules/ui/mw.liverc.ui.js",
+                "modules/ui/mw.liverc.ui.Line.js",
+                "modules/ui/mw.liverc.ui.List.js"
+            ]
+        },
+        "ext.liverc.controller": {
+            "scripts": [
+                "modules/controller/mw.liverc.controller.js",
+                "modules/controller/mw.liverc.controller.List.js"
             ]
         },
         "ext.liverc.rc": {

@@ -12,7 +12,7 @@
 	lrc.LiveRC = function () {
 		this.mainLayout = new GoldenLayout( this.getLayoutConfig() );
 
-		// this.mainLayout.registerComponent( 'listComponent', lrc.controller.List );
+		this.mainLayout.registerComponent( 'listComponent', lrc.controller.List );
 		// this.mainLayout.registerComponent( 'diffComponent', lrc.controller.Diff );
 
 		$( 'body' ).empty();
@@ -45,7 +45,25 @@
 
 		// Or the default configuration in the other case
 		return {
-			content: [ ]
+			content: [ {
+				type: 'row',
+				content: [ {
+					type: 'component',
+					componentName: 'listComponent',
+					componentState: { label: 'A' }
+				}, {
+					type: 'column',
+					content: [ {
+						type: 'component',
+						componentName: 'listComponent',
+						componentState: { label: 'B' }
+					}, {
+						type: 'component',
+						componentName: 'listComponent',
+						componentState: { label: 'C' }
+					} ]
+				} ]
+			} ]
 		};
 	};
 
