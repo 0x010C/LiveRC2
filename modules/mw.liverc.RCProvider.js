@@ -1,6 +1,6 @@
 'use strict';
 
-( function ( mw, $, OO, lrc ) {
+( function ( mw, $, lrc ) {
 
 	/**
 	 * Provide the Recent Changes of the current wiki
@@ -11,9 +11,6 @@
 	 * @constructor
 	 */
 	lrc.RCProvider = function () {
-		// Mixin constructors
-		OO.EventEmitter.call( this );
-
 		// Properties
 		this.dbname = 'frwiki';// mw.config.get( 'wgDBname' );
 
@@ -24,8 +21,6 @@
 		this.source.onmessage = this.onMessage.bind( this );
 		this.source.onerror = this.onError.bind( this );
 	};
-
-	OO.mixinClass( lrc.RCProvider, OO.EventEmitter );
 
 	lrc.RCProvider.prototype.onOpen = function () {
 		return;
@@ -50,7 +45,7 @@
 				rc = new lrc.rc.Generic( rawRC );
 		}
 
-		this.emit( 'newrc', rc );
+		lrc.singleton.eventHub.emit( 'newrc', rc );
 	};
 
 	lrc.RCProvider.prototype.onError = function ( message ) {
@@ -59,4 +54,4 @@
 		}
 	};
 
-}( mediaWiki, jQuery, OO, mediaWiki.liverc ) );
+}( mediaWiki, jQuery, mediaWiki.liverc ) );

@@ -10,7 +10,8 @@
 		"OO": false,
 		"wikibase": false,
 		"globeCoordinate": false,
-		"dataValues": false
+		"dataValues": false,
+		"GoldenLayout": false
 	},
 	"rules": {
 		"no-underscore-dangle": [ 0 ]
