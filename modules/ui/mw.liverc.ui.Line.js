@@ -2,6 +2,7 @@
 
 ( function ( mw, $, lrc ) {
 
+	var LINE_TEMPLATE = '<td>$(time)</td><td><a href="' + mw.config.get( 'wgArticlePath' ).replace( '$1', 'User:$(username)' ) + '">$(username)</a></td><td>$(title)</td><td>$(comment)</td>';
 	/**
 	 *
 	 *
@@ -11,7 +12,7 @@
 	 */
 	lrc.ui.Line = function ( rc, parentContainer ) {
 		// Properties
-		this.container = $( '<div>' );
+		this.container = $( '<tr>' );
 
 		// Initialization
 		this.update( rc );
@@ -22,10 +23,14 @@
 	};
 
 	lrc.ui.Line.prototype.update = function ( rc ) {
-		var content = "";
+		var content = '';
 
 		// TODO: stuff
-		content = JSON.stringify( rc );
+		content = LINE_TEMPLATE
+			.replace( /\$\(username\)/g, rc.user )
+			.replace( /\$\(title\)/g, rc.title )
+			.replace( /\$\(comment\)/g, rc.comment )
+			.replace( /\$\(time\)/g, new Date( rc.timestamp ).toLocaleTimeString() );
 
 		this.container.html( content );
 		return;
