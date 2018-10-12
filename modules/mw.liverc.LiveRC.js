@@ -46,22 +46,29 @@
 		// Or the default configuration in the other case
 		return {
 			content: [ {
-				type: 'row',
+				type: 'column',
 				content: [ {
-					type: 'component',
-					componentName: 'listComponent',
-					componentState: { label: 'A' }
-				}, {
-					type: 'column',
+					type: 'row',
 					content: [ {
 						type: 'component',
 						componentName: 'listComponent',
 						componentState: { label: 'B' }
 					}, {
-						type: 'component',
-						componentName: 'listComponent',
-						componentState: { label: 'C' }
+						type: 'stack',
+						content: [ {
+							type: 'component',
+							componentName: 'listComponent',
+							componentState: { label: 'C' }
+						}, {
+							type: 'component',
+							componentName: 'listComponent',
+							componentState: { label: 'D' }
+						} ]
 					} ]
+				}, {
+					type: 'component',
+					componentName: 'listComponent',
+					componentState: { label: 'A' }
 				} ]
 			} ]
 		};

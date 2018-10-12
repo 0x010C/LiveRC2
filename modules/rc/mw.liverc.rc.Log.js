@@ -1,6 +1,6 @@
 'use strict';
 
-( function ( mw, $, OO, lrc ) {
+( function ( mw, $, lrc ) {
 
 	/**
 	 *
@@ -24,4 +24,4 @@
 
 	OO.inheritClass( lrc.rc.Log, lrc.rc.Generic );
 
-}( mediaWiki, jQuery, OO, mediaWiki.liverc ) );
+}( mediaWiki, jQuery, mediaWiki.liverc ) );

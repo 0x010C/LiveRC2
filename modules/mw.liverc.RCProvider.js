@@ -6,13 +6,12 @@
 	 * Provide the Recent Changes of the current wiki
 	 *
 	 * @class lrc.RCProvider
-	 * @mixins OO.EventEmitter
 	 *
 	 * @constructor
 	 */
 	lrc.RCProvider = function () {
 		// Properties
-		this.dbname = 'frwiki';// mw.config.get( 'wgDBname' );
+		this.dbname = 'frwiki';// DEBUG: mw.config.get( 'wgDBname' );
 
 		// Initialization
 		this.source = new EventSource( 'https://stream.wikimedia.org/v2/stream/recentchange' );

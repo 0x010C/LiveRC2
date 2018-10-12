@@ -71,7 +71,7 @@
         "ext.liverc.styles": {
             "styles": [
 				"lib/golden-layout/goldenlayout-base.css",
-				"lib/golden-layout/goldenlayout-dark-theme.css",
+				"lib/golden-layout/custom-theme.css",
                 "modules/mw.liverc.css"
             ]
         },

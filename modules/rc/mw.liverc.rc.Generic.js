@@ -1,6 +1,6 @@
 'use strict';
 
-( function ( mw, $, OO, lrc ) {
+( function ( mw, $, lrc ) {
 
 	/**
 	 *
@@ -22,4 +22,4 @@
 		this.bot = config.bot;
 	};
 
-}( mediaWiki, jQuery, OO, mediaWiki.liverc ) );
+}( mediaWiki, jQuery, mediaWiki.liverc ) );

@@ -1,6 +1,6 @@
 'use strict';
 
-( function ( mw, $, OO, lrc ) {
+( function ( mw, $, lrc ) {
 
 	/**
 	 *
@@ -66,4 +66,4 @@
 		delete this.container;
 	};
 
-}( mediaWiki, jQuery, OO, mediaWiki.liverc ) );
+}( mediaWiki, jQuery, mediaWiki.liverc ) );
