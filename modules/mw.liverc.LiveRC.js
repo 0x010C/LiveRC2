@@ -21,10 +21,14 @@
 		this.mainLayout.on( 'stateChanged', this.saveLayoutConfig, this );
 
 		if ( !this.mainLayout.isSubWindow ) {
+			lrc.singleton.api = new mw.ForeignApi( 'https://fr.wikipedia.org/w/api.php', {
+				anonymous: true,
+				parameters: { origin: '*' },
+				ajax: { timeout: 10000 }
+			} ); //DEBUG: mw.Api();
 			lrc.singleton.eventHub = this.mainLayout.eventHub;
 			lrc.singleton.rcProvider = new lrc.RCProvider();
-			// TODO: UserInfoProvider
-			// TODO: RevisionInfoProvider
+			lrc.singleton.metadataProvider = new lrc.MetadataProvider();
 			// TODO: RevisionProvider
 		}
 

@@ -6,7 +6,6 @@
 	 * Provide the Recent Changes of the current wiki
 	 *
 	 * @class lrc.RCProvider
-	 * @mixins OO.EventEmitter
 	 *
 	 * @constructor
 	 */
@@ -22,7 +21,7 @@
 
 	lrc.controller.List.prototype.onNewRC = function ( rc ) {
 		// Pre-filter Hooks
-		// Widening Hooks
+		lrc.singleton.metadataProvider.get( { users: [ rc.user ], revs: [ rc.id ] } );
 		// filter Hooks
 		this.ui.showNewRC( rc );
 		// post-update Hooks

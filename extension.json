@@ -25,11 +25,13 @@
             "scripts": [
 				"lib/golden-layout/goldenlayout.js",
                 "modules/mw.liverc.RCProvider.js",
+				"modules/mw.liverc.MetadataProvider.js",
                 "modules/mw.liverc.LiveRC.js"
             ],
 			"dependencies": [
 				"mediawiki.util",
 				"mediawiki.storage",
+				"mediawiki.ForeignApi",
 				"oojs",
 			    "ext.liverc.base",
 				"ext.liverc.ui",
